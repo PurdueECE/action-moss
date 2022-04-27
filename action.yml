@@ -1,0 +1,13 @@
+name: "action-moss"
+description: "Action to run the MOSS plagiarism checker on a repository."
+author: "Purdue ECE"
+inputs:
+  user_id:
+    description: MOSS system user ID
+    required: true
+  args:
+    description: file1 file2 file3 ... [-l language] [-d] [-b basefile1] ... [-b basefilen] [-m \#] [-c "string"]
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
