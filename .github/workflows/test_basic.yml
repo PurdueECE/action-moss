@@ -8,4 +8,4 @@ jobs:
       - uses: ./
         with:
           user_id: ${{ secrets.MOSS_USER_ID }}
-          args: test_data/basic/main.py -l python
+          args: -l python test_data/basic/main.py
