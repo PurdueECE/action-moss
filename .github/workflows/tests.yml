@@ -1,4 +1,4 @@
-name: Basic Test
+name: Tests
 on: push
 jobs:
   test_basic:
@@ -8,4 +8,4 @@ jobs:
       - uses: ./
         with:
           user_id: ${{ secrets.MOSS_USER_ID }}
-          args: "-l python test_data/basic/main.py"
+          args: -l python test_data/basic/main.py
