@@ -20,13 +20,8 @@ def run_moss(args):
             m.addFile(filepath)
     # Send request
     url = m.send()
-    # Download report
-    m.saveWebPage(url, f"report.html")
-    mosspy.download_report(url, ".")
-    report = []
-    with open('report.html', "r") as f:
-        report = f.readlines()
-    return report
+    core.info(f'Report URL: {url}')
+    return url
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -84,8 +79,8 @@ def parse_args():
 def main():
     try:
         args = parse_args()
-        report = run_moss(args)
-        core.set_output('report', report)
+        url = run_moss(args)
+        core.set_output('url', url)
     except Exception as e:
         core.set_failed(str(e))
         

@@ -8,6 +8,9 @@ inputs:
   args:
     description: file1 file2 file3 ... [-l language] [-d] [-b basefile1] ... [-b basefilen] [-m \#] [-c "string"]
     required: true
+outputs:
+  url:
+    description: URL of generated MOSS report
 runs:
   using: "docker"
   image: "Dockerfile"
