@@ -9,5 +9,5 @@ jobs:
         uses: ./
         with:
           user_id: ${{ secrets.MOSS_USER_ID }}
-          args: -l python test_data/basic/main.py
+          arguments: -l python test_data/basic/main.py
       - run: echo 'MOSS Report URL = ${{ steps.run_moss.outputs.url }}'

@@ -74,7 +74,7 @@ def parse_args():
         type=int,
         default=250,
     )
-    return parser.parse_args(os.environ['INPUT_ARGS'].split(' '))
+    return parser.parse_args(os.environ['INPUT_ARGUMENTS'].split(' '))
 
 def main():
     try:
